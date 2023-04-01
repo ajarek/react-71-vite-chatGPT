@@ -3,7 +3,10 @@ import { FiSun,FiAlertTriangle } from 'react-icons/fi';
 import { BsLightningCharge} from 'react-icons/bs';
 const Info = () => {
   return (
+    <>
+    <h1>ChatGPT</h1>
     <div className='info'>
+       
       <div className="info-card exemple">
          <p className='info-icon'><FiSun/></p>
          <p  className='info-title'>Examples</p>
@@ -26,6 +29,7 @@ const Info = () => {
         <button>Limited knowledge of world and events after 2021</button>
       </div>
     </div>
+    </>
   )
 }
 
