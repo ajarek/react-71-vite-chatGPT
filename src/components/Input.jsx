@@ -8,6 +8,7 @@ const Input = ({ onClick, inputValue, onChange }) => {
         placeholder='Send a message...'
         value={inputValue}
         onChange={onChange}
+       
       />
       <button onClick={onClick}>
         <CiLocationArrow1 />

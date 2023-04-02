@@ -1,8 +1,12 @@
 import { React, useState, useContext, useEffect } from 'react'
 import { AppContext } from '../App'
 
+
+
+
 const AnswerPanel = () => {
-  const { viewInfo, setViewInfo,newValue, setNewValue } = useContext(AppContext)
+  const { viewInfo, setViewInfo,newValue, setNewValue ,message, setMessage} = useContext(AppContext)
+ 
   return (
     <div className='answer-wrapper'>
       <div className='question'>
@@ -17,19 +21,9 @@ const AnswerPanel = () => {
           />
         </div>
         <div className='text'>
-          <p>As an AI language model, I'm not capable of emotions, but I can provide information about React, a popular JavaScript library for building user interfaces.</p>
+          <p>{message}</p>
 
-    <p>React is widely used for building interactive and reusable UI components for web and mobile applications. It allows developers to create complex UIs with ease by breaking down the application into small, reusable components. React uses a virtual DOM, which helps to improve the performance of the application by minimizing the number of updates to the actual DOM.</p>
     
-    <p>React also supports server-side rendering, which helps to improve the initial load time of the application, and it can be used with other libraries and frameworks like Redux, Vue, and Angular.</p>
-    
-    <p>Overall, React is a powerful and versatile tool for building modern web and mobile applications, and it continues to be widely adopted by developers around the world.</p>
-    <p>React also supports server-side rendering, which helps to improve the initial load time of the application, and it can be used with other libraries and frameworks like Redux, Vue, and Angular.</p>
-    
-    <p>Overall, React is a powerful and versatile tool for building modern web and mobile applications, and it continues to be widely adopted by developers around the world.</p>
-    <p>React also supports server-side rendering, which helps to improve the initial load time of the application, and it can be used with other libraries and frameworks like Redux, Vue, and Angular.</p>
-    
-    <p>Overall, React is a powerful and versatile tool for building modern web and mobile applications, and it continues to be widely adopted by developers around the world.</p>
         </div>
       </div>
     </div>
