@@ -198,3 +198,6 @@ font-size: 1.1rem;
 .footer a {
   color: var(--gray-light);
 }
+.input-button span{
+  opacity: 0.3;
+}
