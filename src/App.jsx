@@ -6,7 +6,7 @@ export const AppContext = createContext()
 function App() {
   const [viewInfo, setViewInfo] = useState(true)
   const [newValue, setNewValue] = useState('')
-  const [message, setMessage] = useState()
+  const [message, setMessage] = useState([])
   return (
     <div className='App'>
       <AppContext.Provider value={{viewInfo, setViewInfo,newValue, setNewValue, message, setMessage }}>
