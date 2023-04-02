@@ -103,6 +103,7 @@ overflow-y: auto;
   border: none;
   border-radius: 8px;
 }
+
 .answer-wrapper{
   display: flex;
   flex-direction: column;

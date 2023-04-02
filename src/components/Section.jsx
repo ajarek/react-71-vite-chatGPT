@@ -9,7 +9,7 @@ const Section = () => {
   const { viewInfo, setViewInfo,newValue, setNewValue, message, setMessage } = useContext(AppContext)
   const viewAnswer = () => {
     if (newValue) {
-    setViewInfo(!viewInfo)
+    setViewInfo(false)
     }
     getMessage()
    
@@ -24,7 +24,7 @@ const Section = () => {
       body:JSON.stringify({
         model: "gpt-3.5-turbo",
       messages: [{role: "user", content: newValue}],
-      max_tokens:100
+      max_tokens:1000
       })
     }
     try{
