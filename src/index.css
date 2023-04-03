@@ -206,3 +206,51 @@ font-size: 1.1rem;
 .input-button span{
   opacity: 0.3;
 }
+.hamburger {
+  position: absolute;
+  left: 10rem;
+  top: 0;
+  z-index: 2;
+}
+
+@media (min-width: 940px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 939px) {
+  .nav .wrapper {
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 0;
+    left: -100vw;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+    background: #34e7e4;
+    height: 8rem;
+    width: 50%;
+  }
+
+  .link {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-none {
+    transform: translateX(100vw);
+    transition: all 0.3s ease-in-out;
+  }
+}
+@media (max-width: 485px) {
+  .nav {
+    padding: 0 1rem;
+  }
+  .nav .title {
+    width: 80%;
+  }
+  .nav .title h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
