@@ -6,13 +6,16 @@ import Footer from './../components/Footer'
 import AnswerPanel from './../components/AnswerPanel'
 const apiKey =import.meta.env.VITE_API_GPT_KEY
 const Section = () => {
-  const { viewInfo, setViewInfo,newValue, setNewValue, message, setMessage } = useContext(AppContext)
+  const { viewInfo, setViewInfo,newValue, setNewValue, message, setMessage, history, setHistory } = useContext(AppContext)
   const viewAnswer = () => {
     if (newValue) {
     setViewInfo(false)
     }
+    if(!history.includes(newValue)){
+    setHistory([...history, newValue])
+    }
     getMessage()
-   
+    setNewValue('')
   }
   const getMessage =async () =>{ 
     const options={
