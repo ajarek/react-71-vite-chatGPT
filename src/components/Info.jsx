@@ -1,7 +1,20 @@
-import React from 'react'
+import { React, useState, useContext, useEffect } from 'react'
+import { AppContext } from '../App'
 import { FiSun,FiAlertTriangle } from 'react-icons/fi';
 import { BsLightningCharge} from 'react-icons/bs';
 const Info = () => {
+  const { viewInfo, setViewInfo,newValue, setNewValue, message, setMessage, history, setHistory, light, setLight } = useContext(AppContext)
+  useEffect(()=>{
+    const nodes= document.querySelectorAll('.btn-exemple')
+    
+    nodes.forEach((node) => {
+     
+     node.addEventListener('click',(e)=>{
+       setNewValue(e.target.textContent);
+    })
+    })
+ 
+   })
   return (
     <>
     <h1>ChatGPT</h1>
@@ -10,9 +23,9 @@ const Info = () => {
       <div className="info-card exemple">
          <p className='info-icon'><FiSun/></p>
          <p  className='info-title'>Examples</p>
-        <button>Explain quantum computing in simple terms →</button>
-        <button>Got any creative ideas for a 10 year old’s birthday? →</button>
-        <button>How do I make an HTTP request in Javascript? →</button>
+        <button className='btn-exemple'>Explain quantum computing in simple terms </button>
+        <button className='btn-exemple'>Got any creative ideas for a 10 year old’s birthday? </button>
+        <button className='btn-exemple'>How do I make an HTTP request in Javascript? </button>
       </div>
       <div className="info-card">
           <p className='info-icon'><BsLightningCharge/></p>
